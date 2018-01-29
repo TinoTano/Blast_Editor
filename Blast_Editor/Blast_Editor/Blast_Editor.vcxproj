@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{8C5BA15D-7DA2-4982-A95A-E7D20E00D283}</ProjectGuid>
+    <RootNamespace>BlastEditor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ComponentCamera.cpp" />
+    <ClCompile Include="ComponentTransform.cpp" />
+    <ClCompile Include="ConsoleWindow.cpp" />
+    <ClCompile Include="imgui-1.53\imgui.cpp" />
+    <ClCompile Include="imgui-1.53\imgui_demo.cpp" />
+    <ClCompile Include="imgui-1.53\imgui_draw.cpp" />
+    <ClCompile Include="imgui-1.53\imgui_impl_sdl_gl3.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Math\AABB.cpp" />
+    <ClCompile Include="Math\AABBTests.cpp" />
+    <ClCompile Include="Math\BitOps.cpp" />
+    <ClCompile Include="Math\Callstack.cpp" />
+    <ClCompile Include="Math\CallstackTests.cpp" />
+    <ClCompile Include="Math\Capsule.cpp" />
+    <ClCompile Include="Math\Circle.cpp" />
+    <ClCompile Include="Math\Clock.cpp" />
+    <ClCompile Include="Math\ClockTests.cpp" />
+    <ClCompile Include="Math\ConversionTests.cpp" />
+    <ClCompile Include="Math\DegenerateTests.cpp" />
+    <ClCompile Include="Math\EncloseTests.cpp" />
+    <ClCompile Include="Math\float2.cpp" />
+    <ClCompile Include="Math\float3.cpp" />
+    <ClCompile Include="Math\float3x3.cpp" />
+    <ClCompile Include="Math\float3x4.cpp" />
+    <ClCompile Include="Math\float4.cpp" />
+    <ClCompile Include="Math\float4d.cpp" />
+    <ClCompile Include="Math\Float4dTests.cpp" />
+    <ClCompile Include="Math\float4x4.cpp" />
+    <ClCompile Include="Math\Frustum.cpp" />
+    <ClCompile Include="Math\FrustumTests.cpp" />
+    <ClCompile Include="Math\GJK.cpp" />
+    <ClCompile Include="Math\GJKTests.cpp" />
+    <ClCompile Include="Math\grisu3.c" />
+    <ClCompile Include="Math\grisu3_cpp.cpp" />
+    <ClCompile Include="Math\LCG.cpp" />
+    <ClCompile Include="Math\LCGTests.cpp" />
+    <ClCompile Include="Math\Line.cpp" />
+    <ClCompile Include="Math\LineSegment.cpp" />
+    <ClCompile Include="Math\LineTests.cpp" />
+    <ClCompile Include="Math\MathFunc.cpp" />
+    <ClCompile Include="Math\MathFuncTests.cpp" />
+    <ClCompile Include="Math\MathLog.cpp" />
+    <ClCompile Include="Math\MathOps.cpp" />
+    <ClCompile Include="Math\MatrixTests.cpp" />
+    <ClCompile Include="Math\MemcpyTests.cpp" />
+    <ClCompile Include="Math\NegativeTests.cpp" />
+    <ClCompile Include="Math\NEONTests.cpp" />
+    <ClCompile Include="Math\OBB.cpp" />
+    <ClCompile Include="Math\OBBTests.cpp" />
+    <ClCompile Include="Math\PBVolume.cpp" />
+    <ClCompile Include="Math\PBVolumeTests.cpp" />
+    <ClCompile Include="Math\Plane.cpp" />
+    <ClCompile Include="Math\Polygon.cpp" />
+    <ClCompile Include="Math\PolygonTests.cpp" />
+    <ClCompile Include="Math\Polyhedron.cpp" />
+    <ClCompile Include="Math\PolyhedronTests.cpp" />
+    <ClCompile Include="Math\Polynomial.cpp" />
+    <ClCompile Include="Math\PositiveTests.cpp" />
+    <ClCompile Include="Math\Quat.cpp" />
+    <ClCompile Include="Math\QuatTests.cpp" />
+    <ClCompile Include="Math\Ray.cpp" />
+    <ClCompile Include="Math\SerializationTests.cpp" />
+    <ClCompile Include="Math\Sphere.cpp" />
+    <ClCompile Include="Math\SphereTests.cpp" />
+    <ClCompile Include="Math\SSEMath.cpp" />
+    <ClCompile Include="Math\SSEMathTests.cpp" />
+    <ClCompile Include="Math\SystemInfo.cpp" />
+    <ClCompile Include="Math\SystemInfoTests.cpp" />
+    <ClCompile Include="Math\TestData.cpp" />
+    <ClCompile Include="Math\TestRunner.cpp" />
+    <ClCompile Include="Math\TransformOps.cpp" />
+    <ClCompile Include="Math\TransformTests.cpp" />
+    <ClCompile Include="Math\Triangle.cpp" />
+    <ClCompile Include="Math\TriangleMesh.cpp" />
+    <ClCompile Include="Math\TriangleMeshTests.cpp" />
+    <ClCompile Include="Math\TriangleTests.cpp" />
+    <ClCompile Include="Math\VectorTests.cpp" />
+    <ClCompile Include="BlastMesh.cpp" />
+    <ClCompile Include="ModuleBlast.cpp" />
+    <ClCompile Include="ModuleCamera3D.cpp" />
+    <ClCompile Include="ModuleEditor.cpp" />
+    <ClCompile Include="ModuleInput.cpp" />
+    <ClCompile Include="ModuleMeshImporter.cpp" />
+    <ClCompile Include="ModuleRenderer3D.cpp" />
+    <ClCompile Include="ModuleTextureImporter.cpp" />
+    <ClCompile Include="ModuleWindow.cpp" />
+    <ClCompile Include="PerfTimer.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="tinyfiledialogs.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="ComponentCamera.h" />
+    <ClInclude Include="ComponentTransform.h" />
+    <ClInclude Include="ConsoleWindow.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="imgui-1.53\imconfig.h" />
+    <ClInclude Include="imgui-1.53\imgui.h" />
+    <ClInclude Include="imgui-1.53\imgui_impl_sdl_gl3.h" />
+    <ClInclude Include="imgui-1.53\imgui_internal.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Math\AABB.h" />
+    <ClInclude Include="Math\AABB2D.h" />
+    <ClInclude Include="Math\assume.h" />
+    <ClInclude Include="Math\BitOps.h" />
+    <ClInclude Include="Math\Callstack.h" />
+    <ClInclude Include="Math\Capsule.h" />
+    <ClInclude Include="Math\Circle.h" />
+    <ClInclude Include="Math\Clock.h" />
+    <ClInclude Include="Math\FixedPoint.h" />
+    <ClInclude Include="Math\float2.h" />
+    <ClInclude Include="Math\float3.h" />
+    <ClInclude Include="Math\float3x3.h" />
+    <ClInclude Include="Math\float3x4.h" />
+    <ClInclude Include="Math\float4.h" />
+    <ClInclude Include="Math\float4d.h" />
+    <ClInclude Include="Math\float4x4.h" />
+    <ClInclude Include="Math\float4x4_neon.h" />
+    <ClInclude Include="Math\float4x4_sse.h" />
+    <ClInclude Include="Math\float4_neon.h" />
+    <ClInclude Include="Math\float4_sse.h" />
+    <ClInclude Include="Math\FloatCmp.h" />
+    <ClInclude Include="Math\Frustum.h" />
+    <ClInclude Include="Math\GeometryAll.h" />
+    <ClInclude Include="Math\GeomType.h" />
+    <ClInclude Include="Math\GJK.h" />
+    <ClInclude Include="Math\grisu3.h" />
+    <ClInclude Include="Math\HitInfo.h" />
+    <ClInclude Include="Math\InclWindows.h" />
+    <ClInclude Include="Math\JSONReport.h" />
+    <ClInclude Include="Math\KDTree.h" />
+    <ClInclude Include="Math\LCG.h" />
+    <ClInclude Include="Math\Line.h" />
+    <ClInclude Include="Math\LineSegment.h" />
+    <ClInclude Include="Math\MathAll.h" />
+    <ClInclude Include="Math\MathBuildConfig.h" />
+    <ClInclude Include="Math\MathConstants.h" />
+    <ClInclude Include="Math\MathFunc.h" />
+    <ClInclude Include="Math\MathGeoLib.h" />
+    <ClInclude Include="Math\MathGeoLibFwd.h" />
+    <ClInclude Include="Math\MathLog.h" />
+    <ClInclude Include="Math\MathNamespace.h" />
+    <ClInclude Include="Math\MathTypes.h" />
+    <ClInclude Include="Math\MatrixProxy.h" />
+    <ClInclude Include="Math\myassert.h" />
+    <ClInclude Include="Math\OBB.h" />
+    <ClInclude Include="Math\ObjectGenerators.h" />
+    <ClInclude Include="Math\PBVolume.h" />
+    <ClInclude Include="Math\Plane.h" />
+    <ClInclude Include="Math\Polygon.h" />
+    <ClInclude Include="Math\Polyhedron.h" />
+    <ClInclude Include="Math\Polynomial.h" />
+    <ClInclude Include="Math\QuadTree.h" />
+    <ClInclude Include="Math\Quat.h" />
+    <ClInclude Include="Math\quat_simd.h" />
+    <ClInclude Include="Math\Ray.h" />
+    <ClInclude Include="Math\Rect.h" />
+    <ClInclude Include="Math\Reinterpret.h" />
+    <ClInclude Include="Math\SAT.h" />
+    <ClInclude Include="Math\simd.h" />
+    <ClInclude Include="Math\Sphere.h" />
+    <ClInclude Include="Math\SSEMath.h" />
+    <ClInclude Include="Math\sse_mathfun.h" />
+    <ClInclude Include="Math\SystemInfo.h" />
+    <ClInclude Include="Math\TestData.h" />
+    <ClInclude Include="Math\TestRunner.h" />
+    <ClInclude Include="Math\TransformOps.h" />
+    <ClInclude Include="Math\Triangle.h" />
+    <ClInclude Include="Math\TriangleMesh.h" />
+    <ClInclude Include="BlastMesh.h" />
+    <ClInclude Include="Module.h" />
+    <ClInclude Include="ModuleBlast.h" />
+    <ClInclude Include="ModuleCamera3D.h" />
+    <ClInclude Include="ModuleEditor.h" />
+    <ClInclude Include="ModuleInput.h" />
+    <ClInclude Include="ModuleMeshImporter.h" />
+    <ClInclude Include="ModuleRenderer3D.h" />
+    <ClInclude Include="ModuleTextureImporter.h" />
+    <ClInclude Include="ModuleWindow.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastArray.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastAssert.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastAtomic.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastDLink.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastFixedArray.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastFixedBitmap.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastFixedBoolArray.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastFixedPriorityQueue.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastFixedQueue.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastGeometry.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastHashMap.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastHashSet.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastIncludeWindows.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastIndexFns.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastIteratorBase.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastMath.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastMemory.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastPreprocessorInternal.h" />
+    <ClInclude Include="Nvidia\Blast\Include\common\NvBlastTime.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\assetutils\NvBlastExtAssetUtils.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoring.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringBondGenerator.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringCollisionBuilder.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringFractureTool.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringMesh.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringMeshCleaner.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\authoring\NvBlastExtAuthoringTypes.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\exporter\NvBlastExtExporter.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\exporter\NvBlastExtExporterJsonCollision.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\import\NvBlastExtApexImportTool.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtCustomProfiler.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtImpactDamageManager.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPx.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxActor.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxAsset.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxFamily.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxListener.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxManager.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxStressSolver.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtPxTask.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastExtSync.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\physx\NvBlastPxCallbacks.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\serialization\NvBlastExtLlSerialization.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\serialization\NvBlastExtPxSerialization.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\serialization\NvBlastExtSerialization.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\serialization\NvBlastExtTkSerialization.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\shaders\NvBlastExtDamageShaders.h" />
+    <ClInclude Include="Nvidia\Blast\Include\extensions\stress\NvBlastExtStressSolver.h" />
+    <ClInclude Include="Nvidia\Blast\Include\globals\NvBlastAllocator.h" />
+    <ClInclude Include="Nvidia\Blast\Include\globals\NvBlastDebugRender.h" />
+    <ClInclude Include="Nvidia\Blast\Include\globals\NvBlastGlobals.h" />
+    <ClInclude Include="Nvidia\Blast\Include\globals\NvBlastProfiler.h" />
+    <ClInclude Include="Nvidia\Blast\Include\lowlevel\NvBlast.h" />
+    <ClInclude Include="Nvidia\Blast\Include\lowlevel\NvBlastPreprocessor.h" />
+    <ClInclude Include="Nvidia\Blast\Include\lowlevel\NvBlastTypes.h" />
+    <ClInclude Include="Nvidia\Blast\Include\lowlevel\NvCTypes.h" />
+    <ClInclude Include="Nvidia\Blast\Include\lowlevel\NvPreprocessor.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTk.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkActor.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkAsset.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkEvent.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkFamily.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkFramework.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkGroup.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkIdentifiable.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkJoint.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkObject.h" />
+    <ClInclude Include="Nvidia\Blast\Include\toolkit\NvBlastTkType.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxBVH33MidphaseDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxBVH34MidphaseDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\Pxc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxConvexMeshDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxCooking.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxMidphaseDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\cooking\PxTriangleMeshDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxBinaryConverter.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxBroadPhaseExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxClothFabricCooker.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxClothMeshDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxClothMeshQuadifier.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxClothTetherCooker.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxCollectionExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxConstraintExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxConvexMeshExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxD6Joint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDefaultAllocator.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDefaultCpuDispatcher.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDefaultErrorCallback.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDefaultSimulationFilterShader.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDefaultStreams.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxDistanceJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxExtensionsAPI.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxFixedJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxJointLimit.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxMassProperties.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxParticleExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxPrismaticJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRaycastCCD.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRepXSerializer.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRepXSimpleType.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRevoluteJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRigidActorExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxRigidBodyExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxSceneQueryExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxSerialization.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxShapeExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxSimpleFactory.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxSmoothNormals.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxSphericalJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxStringTableExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\extensions\PxTriangleMeshExt.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\Px.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxAllocatorCallback.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxAssert.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxBitAndData.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxBounds3.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxErrorCallback.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxErrors.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxFlags.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxFoundation.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxFoundationVersion.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxIntrinsics.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxIO.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxMat33.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxMat44.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxMath.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxMathUtils.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxMemory.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxPlane.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxPreprocessor.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxProfiler.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxQuat.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxSimpleTypes.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxStrideIterator.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxTransform.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxUnionCast.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxVec2.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxVec3.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\PxVec4.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\windows\PxWindowsFoundationDelayLoadHook.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\foundation\windows\PxWindowsIntrinsics.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxActor.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxAggregate.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxArticulation.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxArticulationJoint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxArticulationLink.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxBatchQuery.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxBatchQueryDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxBroadPhase.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxClient.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxConstraint.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxConstraintDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxContact.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxContactModifyCallback.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxDeletionListener.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxFiltering.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxForceMode.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxImmediateMode.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxLockedData.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxMaterial.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPhysics.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPhysicsAPI.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPhysicsSerialization.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPhysicsVersion.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPhysXConfig.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxPruningStructure.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxQueryFiltering.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxQueryReport.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxRigidActor.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxRigidBody.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxRigidDynamic.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxRigidStatic.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxScene.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxSceneDesc.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxSceneLock.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxShape.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxSimulationEventCallback.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxSimulationStatistics.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxSpatialIndex.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxVisualizationParameter.h" />
+    <ClInclude Include="Nvidia\PhysX\Include\PxVolumeCache.h" />
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="PerfTimer.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="tinyfiledialogs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Math\float2.inl" />
+    <None Include="Math\KDTree.inl" />
+    <None Include="Math\Matrix.inl" />
+    <None Include="Math\QuadTree.inl" />
+    <None Include="Math\TriangleMesh_IntersectRay_AVX.inl" />
+    <None Include="Math\TriangleMesh_IntersectRay_CPP.inl" />
+    <None Include="Math\TriangleMesh_IntersectRay_SSE.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
